@@ -9,6 +9,25 @@ for the serialization.
 
 ## Notes
 
+### Client & Server responsibilities
+
+There must be a clean separation between client and server.  The
+suggestion for the review is that the client is responsible for
+generating the EDN (grafter code) and serializing it in the shape that
+I have suggested here.
+
+The final serialization as illustrated by
+[core.clj](https://github.com/dapaas/grafter-gui-template-pipeline/blob/master/src/sintef_grafter_gui_template/core.clj)
+should be submitted to the server as a single file.
+
+The server will then need to be responsible for performing these tasks:
+
+1. Placing the submitted file into the leiningen grafter project
+structure also shown in this repository.
+1. Packaging the transformation into an executable by running `lein uberjar`
+   to generate the executable transformation.
+1. Registering the transformation with Ontotexts Grafter service wrapper.
+
 ### File Order is important
 
 The first thing to remember is that the order of definitions in the
