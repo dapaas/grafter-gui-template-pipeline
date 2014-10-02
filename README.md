@@ -1,4 +1,4 @@
-grafter-gui-template-pipeline
-=============================
+# sintef-grafter-gui-template
 
-A suggested serialization for grafter GUI pipelines
+This is a suggestion for how the GUI SINTEF are building should
+serialize Grafter pipelines.
